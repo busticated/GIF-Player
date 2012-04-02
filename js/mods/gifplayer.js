@@ -11,7 +11,7 @@ define( [ 'jquery' ], function( $ ){
         isPausedClass: '.is-paused',
         fullPathData: 'src',
         preload: 2,
-        autoplay: 2
+        autoplay: 1
     };
 
     var cache = {};
