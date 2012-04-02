@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<title>GIF Player - demo by busticated</title>
+
+	<style type="text/css">
+		body {
+			font: normal 14px/1 sans-serif;
+		}
+		.stream {
+		}
+		.post {
+			width: 940px;
+			margin: 0 auto;
+			background-color: white;
+			-webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
+			-moz-box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
+			box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
+			border: solid 1px #F0F0F0;
+			-webkit-border-radius: 2px;
+			-moz-border-radius: 2px;
+			border-radius: 2px;
+			margin-bottom: 20px;
+			margin-left: 20px;
+			padding: 20px;
+			-webkit-box-sizing: border-box;
+			-moz-box-sizing: border-box;
+			box-sizing: border-box;
+			overflow: hidden; /* just needs clearfix */
+		}
+		.post-inner {
+			position: relative;
+			float: left;
+		}
+		.gifplayer {
+			cursor: pointer;
+		}
+		.gifplayer.is-paused:before {
+			content: "";
+			background: rgba(0, 0, 0, 0.5);
+			position: absolute;
+			top: 0;
+			left: 0;
+			bottom: 0;
+			right: 0;
+		}
+		.gifplayer.is-paused:after {
+			content: "▶";
+			position: absolute;
+			top: 40%;
+			left: 46%;
+			border: 3px solid rgba(255,255,255,0.7);
+			color: rgba(255,255,255,0.7);
+			padding: 5px;
+			border-radius: 100%;
+			width: 30px;
+			height: 30px;
+			text-align: center;
+			font: normal 20px/1.75 sans-serif;
+		}
+		.gifplayer.is-paused:hover:after {
+			border-color:#fff;
+			color: #fff;
+		}
+	</style>
+</head>
+<body>
+	<div class="stream">
+		<div class="post">
+			<div class="post-inner asset-animatedgif gifplayer is-paused">
+				<img src="img/7f00e258-4b94-4e15-a6b9-555987e373c8-thumb.gif" data-src="http://i.chzbgr.com/completestore/2012/3/30/7f00e258-4b94-4e15-a6b9-555987e373c8.gif" id="_r_a_5395183360" alt="Cigarette Roller" title="Cigarette Roller">
+			</div>
+		</div>
+		<div class="post">
+			<div class="post-inner asset-animatedgif gifplayer is-paused">
+				<img src="img/af805df6-1391-4b0c-ac08-1a875a77bcdb-thumb.gif" data-src="http://i.chzbgr.com/completestore/2012/3/28/af805df6-1391-4b0c-ac08-1a875a77bcdb.gif" id="_r_a_6040594176" alt="Tired of This Trick" title="Tired of This Trick">
+			</div>
+		</div>
+		<div class="post">
+			<div class="post-inner asset-animatedgif gifplayer is-paused">
+				<img src="img/49e591c8-5f08-4fd0-978d-3bcb186cd94a-thumb.gif" data-src="http://i.chzbgr.com/completestore/2012/3/30/49e591c8-5f08-4fd0-978d-3bcb186cd94a.gif" id="_r_a_6041904384" alt="Sorry for Party Rocking" title="Sorry for Party Rocking">
+			</div>
+		</div>
+	</div>
+	<script data-main="js/main" src="http://cdnjs.cloudflare.com/ajax/libs/require.js/1.0.7/require.min.js"></script>
+</body>
+</html>
+<!--
+http://i.chzbgr.com/completestore/2012/3/31/1490b2d5-666f-405e-b72f-95d3bdde2d94.gif
+http://i.chzbgr.com/completestore/2012/3/31/ae867ba5-ff66-4946-bac2-f9d91ec0bdd6.gif
+http://i.chzbgr.com/completestore/2012/3/31/cc1d49ae-5c66-4dd5-af6e-49387003c93d.gif
+http://i.chzbgr.com/completestore/2012/3/30/80e13c45-8198-45e0-8362-64e6faf1fd12.gif
+http://i.chzbgr.com/completestore/2012/4/1/847b69e6-5fc1-4dd1-bf64-8a12e82f927a.gif
+http://i.chzbgr.com/completestore/2012/3/30/cb3b447d-1880-46f9-96a4-7c85c507be3b.gif
+http://i.chzbgr.com/completestore/2012/3/29/9b57dce3-721e-4134-83bb-96ae69a61d20.gif
+http://i.chzbgr.com/completestore/2012/3/27/f5ef7384-ed89-413a-8eaa-d28c4476200a.gif
+http://i.chzbgr.com/completestore/2012/3/30/7ac0f65a-0019-46ea-a2b8-a46294373ca9.gif
+http://i.chzbgr.com/completestore/2012/3/28/30ee995f-0c3c-4d28-958e-df59b1e483d6.gif
+http://i.chzbgr.com/completestore/2012/3/30/105c2411-4bf5-42c9-ae9f-f19f234e3dc5.gif
+http://i.chzbgr.com/completestore/2012/3/30/ae4c8875-5226-49cc-9b60-34130181127c.gif
+http://i.chzbgr.com/completestore/2012/3/30/0fdfeee1-e781-42d5-ab58-707d1a619447.gif
+http://i.chzbgr.com/completestore/2012/3/29/222876fa-7e7d-4712-a108-97be5801401c.gif
+http://i.chzbgr.com/completestore/2012/3/28/3bdf54c8-2f1d-47b3-b560-8a3234ae3aa0.gif
+http://i.chzbgr.com/completestore/2012/3/30/49e591c8-5f08-4fd0-978d-3bcb186cd94a.gif
+http://i.chzbgr.com/completestore/2012/3/30/7f00e258-4b94-4e15-a6b9-555987e373c8.gif
+http://i.chzbgr.com/completestore/2012/3/30/394621f2-31f2-42fe-8afd-85a9a6b6a6dc.gif
+http://i.chzbgr.com/completestore/2012/3/30/36346741-e9c4-4bfb-9397-618f72c9a20f.gif
+http://i.chzbgr.com/completestore/2012/3/29/c492ec6c-5024-4de2-8539-7bb0262863e6.gif
+http://i.chzbgr.com/completestore/2012/3/29/64e0044c-4988-4b9a-83f5-c3e7e7ab5e0b.gif
+http://i.chzbgr.com/completestore/2012/3/29/90dc615b-5acf-4980-9e47-6ba712336b03.gif
+http://i.chzbgr.com/completestore/2012/3/28/af805df6-1391-4b0c-ac08-1a875a77bcdb.gif
+http://i.chzbgr.com/completestore/2012/3/29/166b11da-ebc0-47b7-8f43-d5ca6bc13b87.gif
+http://i.chzbgr.com/completestore/2012/3/29/e38f1d6f-456b-44d8-b6ed-6da4b9589554.gif
+http://i.chzbgr.com/completestore/2012/3/28/4d8c659e-db77-42ea-b341-4ad4e7602269.gif
+http://i.chzbgr.com/completestore/2012/3/29/beb2265f-d505-445d-ad4c-5e39844fcddf.gif
+http://i.chzbgr.com/completestore/2012/3/29/b141a34b-8f14-4e25-9bb6-2f9ab8cabe70.gif
+http://i.chzbgr.com/completestore/2012/3/26/2b40ac5a-885f-477c-b39b-950e35fdfaa4.gif
+http://i.chzbgr.com/completestore/2012/3/28/826be079-b677-444c-bcd7-ada8418b5dc6.gif
+http://i.chzbgr.com/completestore/2012/3/28/6d829c80-34b5-40e7-aeb9-016710ba6102.gif
+http://i.chzbgr.com/completestore/2012/3/29/497c75dc-9383-4aff-9837-b641e86c80fb.gif
+http://i.chzbgr.com/completestore/2012/3/27/2bbee4f0-e2f4-427a-b0cf-2347107a0795.gif
+http://i.chzbgr.com/completestore/2012/3/28/f1f6818b-f63f-4225-80f6-c85622324bc6.gif
+http://i.chzbgr.com/completestore/2012/3/26/98d31a0e-ad01-4297-8cff-b199774435f7.gif
+http://i.chzbgr.com/completestore/2012/3/16/8ed956a1-6467-4436-8211-fc93edf11e8a.gif
+http://i.chzbgr.com/completestore/2012/3/21/048242ac-cc8d-4f55-ae3a-2736e5b0d56a.gif
+http://i.chzbgr.com/completestore/2012/3/21/4d0db1be-e7af-41f1-8b63-c8b1940dc9be.gif
+http://i.chzbgr.com/completestore/2012/3/20/33e3c8d2-f3a0-4793-b2e5-936c61a5c67e.gif
+http://i.chzbgr.com/completestore/2012/3/21/b97107fb-0899-474d-9c06-cb719100718a.gif
+http://i.chzbgr.com/completestore/2012/3/20/20f166e6-899c-4c26-ba50-88375179ae5f.gif
+http://i.chzbgr.com/completestore/2012/3/21/db3540e4-c690-4b70-aeac-787e115a87ea.gif
+http://i.chzbgr.com/completestore/2012/3/20/c754d05f-b6f9-428f-b596-7241ab62dfd8.gif
+http://i.chzbgr.com/completestore/2012/3/21/f2b0a150-e28a-406a-bd9e-66536e417724.gif
+http://i.chzbgr.com/completestore/2012/3/21/5c4d0607-7ca3-4396-9b4f-e02c39675d37.gif
+http://i.chzbgr.com/completestore/2012/3/21/90e7adf9-d17d-4b25-b32b-5641a52426c4.gif
+http://i.chzbgr.com/completestore/2012/3/21/d69fedb8-e2f9-4059-9ef4-d04ae176201b.gif
+http://i.chzbgr.com/completestore/2012/3/21/98172c10-cb39-46d4-a231-d14bd5c5007e.gif
+http://i.chzbgr.com/completestore/2012/3/21/b1767baa-7c74-4f34-a483-1f577590e679.gif
+http://i.chzbgr.com/completestore/2012/3/21/b1767baa-7c74-4f34-a483-1f577590e679.gif
+http://i.chzbgr.com/completestore/2012/3/20/a059fe6b-a37c-4623-85e2-c364b9ab2de6.gif
+http://i.chzbgr.com/completestore/2012/3/20/db75083d-f4c3-4088-b885-0c38938d5892.gif
+http://i.chzbgr.com/completestore/2012/3/20/3c814896-ebd4-4b1d-af0e-943fb44a0e0e.gif
+http://i.chzbgr.com/completestore/2012/3/20/496ce4ac-4481-4473-9b70-2fe52e34a5b9.gif
+http://i.chzbgr.com/completestore/2012/3/20/20308cd7-53da-4e2a-9c91-6d5c72e6a4a8.gif
+http://i.chzbgr.com/completestore/2012/3/17/4b11b16a-4f91-4fd9-adc4-16f8accb4ff5.gif
+http://i.chzbgr.com/completestore/2012/3/20/3407aadd-4112-4f48-97a9-de7ebd9bf55d.gif
+http://i.chzbgr.com/completestore/2012/3/19/775a4f3a-c361-4fd5-8b5f-27e25b57312d.gif
+http://i.chzbgr.com/completestore/2012/3/20/8c252c72-ac51-42ef-85a9-16e1a28a3124.gif
+http://i.chzbgr.com/completestore/2012/3/20/325d249b-9b1a-466b-a051-2619b55f99f0.gif
+http://i.chzbgr.com/completestore/2012/3/20/0b9e05d3-a903-46f4-9693-7a01442d27fa.gif
+http://i.chzbgr.com/completestore/2012/3/20/f2662d49-7cb9-4ddf-a89e-f00f9ad2adc0.gif
+http://i.chzbgr.com/completestore/2012/3/19/d921ccb0-826c-4589-bbf8-c3e1125f9d5e.gif
+http://i.chzbgr.com/completestore/2012/3/19/a00b0b31-3af5-42f2-9c24-93a58726bc75.gif
+http://i.chzbgr.com/completestore/2012/3/19/4c3b3bb3-ea34-4594-8a9e-e58d6c4d092c.gif
+http://i.chzbgr.com/completestore/2012/3/19/85daaf26-11df-46ec-8d0f-14285b734bec.gif
+http://i.chzbgr.com/completestore/2012/3/19/697f9612-f143-4bfb-8bd0-2b074f496188.gif
+http://i.chzbgr.com/completestore/2012/3/19/356a8821-b65c-4673-86e9-6d42284d77ba.gif
+http://i.chzbgr.com/completestore/2012/3/19/dac983b0-21b0-4672-ae1b-164e3fe80321.gif
+http://i.chzbgr.com/completestore/2012/3/19/2f7e1248-d00f-4dcf-9069-30bb1400f574.gif
+-->

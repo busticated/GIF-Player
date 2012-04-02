@@ -1,0 +1,62 @@
+<!doctype html>
+<head>
+	<link rel="stylesheet" href="http://code.jquery.com/qunit/qunit-git.css" type="text/css" media="screen">
+	<script type="text/javascript" src="http://code.jquery.com/qunit/qunit-git.js"></script>
+
+	<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/require.js/1.0.7/require.min.js"></script>
+	<script>
+		require.config({
+			baseUrl: '../../',
+			paths : {
+				'jquery' : 'http://code.jquery.com/jquery-latest'
+			}
+		});
+		require([ 'mods/gifplayer' ], function( gifplayer ) {
+
+			module( "gifplayer : basics" );
+
+			test( 'environment', function(){
+				notStrictEqual( window.location.protocol, 'file:', 'Not running tests under the "file:" protocol' );
+			});
+
+			test( 'confirm module methods & properties', function(){
+				var methods = [ 'setup', 'listen', 'getCache' ];
+
+				expect( 1 + methods.length );
+
+				strictEqual( typeof gifplayer.options, 'object', 'options property is available' );
+
+				for ( var method in methods ){
+					strictEqual( typeof gifplayer[ methods[ method ] ], 'function', 'gifplayer includes the "' + methods[ method ] + '" method' )
+				}
+			});
+		});
+	</script>
+</head>
+<body>
+	<h1 id="qunit-header">GIF Player AMD Module: Test Suite</h1>
+	<h2 id="qunit-banner"></h2>
+	<div id="qunit-testrunner-toolbar"></div>
+	<h2 id="qunit-userAgent"></h2>
+	<ol id="qunit-tests"></ol>
+	<div id="qunit-fixture">
+		<div class="stream">
+			<div class="post">
+				<div class="post-inner asset-animatedgif">
+					<img data-src="http://i.chzbgr.com/completestore/2012/3/30/7f00e258-4b94-4e15-a6b9-555987e373c8.gif" id="_r_a_5395183360" alt="Cigarette Roller" title="Cigarette Roller">
+				</div>
+			</div>
+			<div class="post">
+				<div class="post-inner asset-animatedgif">
+					<img src="http://i.chzbgr.com/completestore/2012/3/28/af805df6-1391-4b0c-ac08-1a875a77bcdb.gif" id="_r_a_6040594176" alt="Tired of This Trick" title="Tired of This Trick">
+				</div>
+			</div>
+			<div class="post">
+				<div class="post-inner asset-animatedgif">
+					<img src="http://i.chzbgr.com/completestore/2012/3/30/49e591c8-5f08-4fd0-978d-3bcb186cd94a.gif" id="_r_a_6041904384" alt="Sorry for Party Rocking" title="Sorry for Party Rocking">
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
